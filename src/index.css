@@ -1,0 +1,231 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* 1. Ajuste de Tamanho da Fonte (Escala Global) */
+html.scale-100 {
+  font-size: 100%;
+}
+html.scale-115 {
+  font-size: 115%;
+}
+html.scale-130 {
+  font-size: 130%;
+}
+html.scale-150 {
+  font-size: 150%;
+}
+
+/* 2. Modos de Alto Contraste e Temas Visuais */
+/* Modo Alto Contraste (Padrão eMAG / Acessibilidade Governamental Preto e Amarelo) */
+body.theme-high-contrast {
+  background-color: #000000 !important;
+  color: #ffff00 !important;
+}
+
+body.theme-high-contrast * {
+  border-color: #ffffff !important;
+}
+
+body.theme-high-contrast div,
+body.theme-high-contrast section,
+body.theme-high-contrast header,
+body.theme-high-contrast footer,
+body.theme-high-contrast nav,
+body.theme-high-contrast aside,
+body.theme-high-contrast article,
+body.theme-high-contrast main {
+  background-color: #000000 !important;
+  color: #ffff00 !important;
+}
+
+body.theme-high-contrast h1,
+body.theme-high-contrast h2,
+body.theme-high-contrast h3,
+body.theme-high-contrast h4,
+body.theme-high-contrast p,
+body.theme-high-contrast span,
+body.theme-high-contrast li {
+  color: #ffff00 !important;
+}
+
+body.theme-high-contrast a {
+  color: #00ffff !important;
+  text-decoration: underline !important;
+  font-weight: 700 !important;
+}
+
+body.theme-high-contrast button {
+  background-color: #000000 !important;
+  color: #ffff00 !important;
+  border: 2px solid #ffff00 !important;
+}
+
+body.theme-high-contrast input,
+body.theme-high-contrast textarea,
+body.theme-high-contrast select {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+}
+
+/* Modo Escuro */
+body.theme-dark {
+  background-color: #090e17 !important;
+  color: #f1f5f9 !important;
+}
+
+body.theme-dark section,
+body.theme-dark header,
+body.theme-dark footer,
+body.theme-dark nav,
+body.theme-dark aside,
+body.theme-dark article,
+body.theme-dark main {
+  background-color: #090e17 !important;
+}
+
+body.theme-dark .bg-white {
+  background-color: #111827 !important;
+  color: #f8fafc !important;
+}
+
+body.theme-dark .bg-slate-50,
+body.theme-dark .bg-slate-100 {
+  background-color: #1e293b !important;
+  color: #f1f5f9 !important;
+}
+
+body.theme-dark .text-slate-900,
+body.theme-dark .text-slate-800,
+body.theme-dark .text-slate-700 {
+  color: #f1f5f9 !important;
+}
+
+body.theme-dark .text-slate-600,
+body.theme-dark .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+body.theme-dark .border-slate-200,
+body.theme-dark .border-slate-300 {
+  border-color: #334155 !important;
+}
+
+/* Modo Monocromático / Escala de Cinza */
+body.theme-grayscale {
+  filter: grayscale(100%) !important;
+}
+
+/* Modo Invertido */
+body.theme-inverted {
+  filter: invert(100%) hue-rotate(180deg) !important;
+  background-color: #ffffff !important;
+}
+
+/* 3. Fonte Especial para Dislexia */
+body.font-dyslexic,
+body.font-dyslexic * {
+  font-family: 'Atkinson Hyperlegible', sans-serif !important;
+  letter-spacing: 0.04em !important;
+  word-spacing: 0.08em !important;
+}
+
+/* 4. Espaçamento Ampliado de Linhas e Texto */
+body.spacing-expanded,
+body.spacing-expanded * {
+  line-height: 2 !important;
+  letter-spacing: 0.12em !important;
+  word-spacing: 0.22em !important;
+}
+
+body.spacing-expanded p,
+body.spacing-expanded li,
+body.spacing-expanded article {
+  margin-bottom: 1.5rem !important;
+}
+
+/* 5. Cursor Ampliado e de Alto Contraste */
+body.big-cursor,
+body.big-cursor * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewBox='0 0 44 44'%3E%3Cpath fill='%23000' stroke='%23FFF' stroke-width='2.5' d='M4 4l13 32 5-13 13-5z'/%3E%3Ccircle cx='6' cy='6' r='4' fill='%23FFDD00' stroke='%23000' stroke-width='1.5'/%3E%3C/svg%3E") 4 4, auto !important;
+}
+
+/* 6. Destaque de Hiperlinks e Elementos Clicáveis */
+body.highlight-links a,
+body.highlight-links button:not(.panel-ui-ignore),
+body.highlight-links [role="button"],
+body.highlight-links input,
+body.highlight-links select,
+body.highlight-links textarea {
+  outline: 3px solid #f59e0b !important;
+  outline-offset: 3px !important;
+  text-decoration: underline !important;
+  font-weight: 700 !important;
+  background-color: rgba(245, 158, 11, 0.08) !important;
+}
+
+body.theme-high-contrast.highlight-links a,
+body.theme-high-contrast.highlight-links button {
+  outline: 4px solid #ffff00 !important;
+}
+
+/* 7. Parar Animações e Reduzir Movimento */
+body.stop-animations *,
+body.stop-animations *::before,
+body.stop-animations *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+
+/* 8. Destaque do Leitor de Tela Ativo (TTS Real-Time Highlighting) */
+[data-reading-active="true"] {
+  outline: 3px solid #2563eb !important;
+  background-color: rgba(37, 99, 235, 0.18) !important;
+  border-radius: 6px;
+  box-shadow: 0 0 16px rgba(37, 99, 235, 0.25);
+  transition: background-color 0.2s ease;
+}
+
+/* Skip to content link (Visível ao receber foco) */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: #1e293b;
+  color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  z-index: 99999;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  transition: top 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: 3px solid #3b82f6;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Simuladores de Visão (Filtros SVG) */
+.vision-protanopia {
+  filter: url('#filter-protanopia') !important;
+}
+.vision-deuteranopia {
+  filter: url('#filter-deuteranopia') !important;
+}
+.vision-tritanopia {
+  filter: url('#filter-tritanopia') !important;
+}
+.vision-achromatopsia {
+  filter: url('#filter-achromatopsia') !important;
+}
+.vision-low-vision {
+  filter: blur(2.5px) contrast(85%) !important;
+}

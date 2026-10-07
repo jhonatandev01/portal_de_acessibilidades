@@ -1,0 +1,6 @@
+{
+  "name": "Painel de Acessibilidade Web - Acessibilidade para Todos",
+  "description": "Painel de acessibilidade com 8 recursos essenciais e site educativo Acessibilidade para Todos desenvolvido para a Turma B da Profª Noemi Paiva dos Santos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
