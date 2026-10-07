@@ -217,7 +217,3 @@ Este projeto foi criado para fins educacionais e acadêmicos. Se desejar, você 
 ## Autor
 
 Projeto desenvolvido por Jhonatan Dev.
-
----
-
-Se quiser, posso também adicionar um arquivo de badge, screenshot, changelog ou uma seção de instalação com publicação no GitHub Pages.
