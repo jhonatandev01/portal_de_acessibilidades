@@ -115,41 +115,6 @@ Se o ambiente apresentar conflito de dependências de peer, use:
 npm install --legacy-peer-deps
 ```
 
-## Publicação no GitHub Pages
-
-Este projeto pode ser publicado no GitHub Pages como uma build estática do Vite. Para isso, siga o fluxo abaixo:
-
-1. Garanta que o repositório esteja conectado ao GitHub.
-2. Ajuste o `base` do Vite para o nome do repositório, se necessário.
-3. Gere a build de produção com `npm run build`.
-4. Publique o conteúdo da pasta `dist/` na branch configurada para o Pages, normalmente `gh-pages`.
-5. No GitHub, abra `Settings > Pages` e selecione a branch de publicação.
-
-Exemplo de configuração para projetos publicados em um repositório GitHub Pages:
-
-```ts
-// vite.config.ts
-export default defineConfig({
-  base: '/portal_de_acessibilidades/',
-});
-```
-
-Se você preferir automação, adicione um fluxo de deploy com GitHub Actions ou o pacote `gh-pages`.
-
-## Execução Local
-
-Inicie o servidor de desenvolvimento:
-
-```bash
-npm run dev
-```
-
-A aplicação ficará disponível em:
-
-```bash
-http://localhost:3000
-```
-
 ## Scripts Disponíveis
 
 - `npm run dev` - inicia o ambiente de desenvolvimento com Vite.
@@ -212,7 +177,7 @@ Contribuições são bem-vindas. Se você quiser evoluir este projeto, boas exte
 
 ## Licença
 
-Este projeto foi criado para fins educacionais e acadêmicos. Se desejar, você pode adaptar a licença conforme a política do seu repositório no GitHub.
+Este projeto foi criado para fins educacionais e acadêmicos.
 
 ## Autor
 
